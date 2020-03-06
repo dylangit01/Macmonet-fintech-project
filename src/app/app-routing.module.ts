@@ -59,7 +59,8 @@ const adminRoutes: Routes = [
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'sessions/signin',
+    // redirectTo: 'sessions/signin',
+    redirectTo: 'user-dashboard/user-dashboard',
     pathMatch: 'full'
   },
 
