@@ -14,7 +14,7 @@ export class SubjectPropertyComponent implements OnInit {
   zoom:number;
   address: string;
   private geoCoder;
-  private showLoader: boolean;
+  showLoader: boolean;
   private showSubjectAmount: boolean;
   subjectAmount: string[];
   private randomSA: string;
