@@ -1,0 +1,1083 @@
+<div class="breadcrumb">
+  <h1>Welcome to Macmonet, a new way of servicing you</h1>
+  <!--  <ul>-->
+  <!--    <li><a href="">Form</a></li>-->
+  <!--    <li>Wizard</li>-->
+  <!--  </ul>-->
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <form-wizard>
+      <wizard-step [title]="'Applicant Basic Info'" [isValid]="basicForm.form.valid" (onNext)="onStep1Next($event)">
+        <form #basicForm="ngForm" >
+          <div class="row">
+
+            <div class="form-group col-md-4 mb-3">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name"
+                     [(ngModel)]="data.firstName">
+            </div>
+
+            <div class="form-group col-md-4 mb-3">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name"
+                     [(ngModel)]="data.lastName">
+            </div>
+
+            <div class="form-group col-md-4 mb-3">
+              <label for="middleInitial">Middel Initial</label>
+              <input type="text" class="form-control" id="middleInitial" name="middleInitial" placeholder="Middel initial"
+                     [(ngModel)]="data.middleInitial">
+            </div>
+
+            <!--            <div class="form-group col-md-6">-->
+            <!--              <label for="birthday">Birthdate</label>-->
+            <!--&lt;!&ndash;              text-color style added&ndash;&gt;-->
+            <!--              <input type="date" class="form-control" style="color: darkgrey" id="birthday" name="birthday" placeholder="Birthday"-->
+            <!--                     [(ngModel)]="data.birthday">-->
+            <!--            </div>-->
+
+            <div class="col-md-6 form-group mb-3">
+              <label for="birthday">Birth date</label>
+              <div class="input-group">
+                <input id="birthday" class="form-control" placeholder="yyyy-mm-dd" name="birthday"
+                       ngbDatepicker #birthday="ngbDatepicker" [(ngModel)]="data.birthday">
+                <div class="input-group-append">
+                  <button class="btn btn-secondary" (click)="birthday.toggle()" type="button">
+                    <i class="icon-regular i-Calendar-4"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+                     [(ngModel)]="data.email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+<!--            Original codes-->
+            <div class="form-group col-md-6">
+              <label for="phone">Phone number</label>
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone number"
+                     [(ngModel)]="data.phone">
+            </div>
+
+<!--          below testing area-->
+<!--              <div class="form-group col-md-6" >-->
+<!--                  <label for="phone">Phone number</label>-->
+<!--                  <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone number"-->
+<!--                         [(ngModel)]="data.phone">-->
+<!--                <button class="btn btn-primary" (click)="addOtherPhoneAtBF()" style="margin-left: 200px">+</button>-->
+<!--                <div class="form-group" *ngFor="let p of this.data.phone; let i=index;">-->
+<!--                  <input type="text" class="form-control" name="phone{{i}}" [(ngModel)]="p"-->
+<!--                         placeholder="Phone number">-->
+<!--                </div>-->
+<!--              </div>-->
+
+
+            <div class="form-group col-md-6">
+              <label for="streetNum">Street #</label>
+              <input type="text" class="form-control" id="streetNum" name="streetNum" placeholder="Street #"
+                     [(ngModel)]="data.streetNum">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="streetName">Street name</label>
+              <input type="text" class="form-control" id="streetName" name="streetName" placeholder="Street name"
+                     [(ngModel)]="data.streetName">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="streetType">Street Type</label>
+              <select class="form-control" id="streetType" name="streetType"
+                      [(ngModel)]="data.streetType">
+                <option>Street</option>
+                <option>Crescent</option>
+                <option>Road</option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="unitNum">Unit # (Optional)</label>
+              <input type="text" class="form-control" id="unitNum" name="unitNum" placeholder="Unit #"
+                     [(ngModel)]="data.unitNum">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="city">City</label>
+              <input type="text" class="form-control" id="city" name="city" placeholder="City"
+                     [(ngModel)]="data.city">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="province">Province</label>
+              <input type="text" class="form-control" id="province" name="province" placeholder="Province"
+                     [(ngModel)]="data.province">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="country">Country</label>
+              <input type="text" class="form-control" id="country" name="country" placeholder="Country"
+                     [(ngModel)]="data.country">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="postCode">Post code</label>
+              <input type="text" class="form-control" id="postCode" name="postCode" placeholder="Post code"
+                     [(ngModel)]="data.postCode">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="addressStatus">Address Status</label>
+              <select class="form-control" id="addressStatus" name="addressStatus"
+                      [(ngModel)]="data.addressStatus">
+                <option>Own</option>
+                <option>Rent</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="monAtAddress">Applicant Month at Address</label>
+              <input type="text" class="form-control" id="monAtAddress" name="monAtAddress" placeholder="Months at Address"
+                     [(ngModel)]="data.monAtAddress">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="creditScore">Applicant Credit Score</label>
+              <input type="number" class="form-control" id="creditScore" name="creditScore" placeholder="Credit Score"
+                     [(ngModel)]="data.creditScore">
+            </div>
+
+            <div class="col-md-12" style="display: flex; justify-content: space-between">
+              <div class="shadow-sm card p-4 col-md-6">
+                <div class="form-group">
+                  <label class="h4 mb-3">Show your picture in Basic Info</label>
+                  <input type="file" class="form-control-file" (change)="fileChanged($event)" aria-describedby="fileHelpId">
+                </div>
+                <img *ngIf="data.profilePic" [src]="data.profilePic" class="img-thumbnail">
+              </div>
+
+              <div class="col-md-6" style="padding-right: 0">
+                <button style="margin: 5px 0" (click)="basicForm.valid ? generateStep1Pdf('open') : ''"
+                        class="col-md-12 btn btn-primary d-flex align-items-center justify-content-center">
+                  <i class="material-icons">picture_as_pdf</i>
+                  <span>Open PDF</span></button>
+                <button style="margin: 5px 0" (click)="basicForm.valid ? generateStep1Pdf('download') : ''"
+                        class="col-md-12 btn btn-primary d-flex align-items-center justify-content-center">
+                  <i class="material-icons">
+                    cloud_download
+                  </i><span>Download PDF</span></button>
+                <button style="margin: 5px 0" (click)="basicForm.valid ? generateStep1Pdf('print') : ''"
+                        class="col-md-12 btn btn-primary d-flex align-items-center justify-content-center">
+                  <i class="material-icons">
+                    print
+                  </i><span>Print PDF</span></button>
+                <button style="margin: 5px 0" type='reset' (click)="resetBasicForm()"
+                        class="col-md-12 btn btn-primary d-flex align-items-center justify-content-center">
+                  <i class="material-icons">
+                    clear
+                  </i><span>Reset</span></button>
+              </div>
+
+            </div>
+          </div>
+        </form>
+      </wizard-step>
+
+      <!--      step two------------------------------------------------------ -->
+
+      <wizard-step [title]="'Subject Property'" [isValid]="step2Form.valid" (onNext)="onStep2Next($event)">
+        <form [formGroup]="step2Form">
+          <div class="row col-md-12">
+
+            <div class="col-md-12">
+              <h5 class="mb-2"><strong>Access Information</strong></h5>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="propertyAccessContact">Property Access Contact</label>
+              <select class="form-control" id="propertyAccessContact" name="propertyAccessContact"
+                      formControlName="propertyAccessContact">
+                <option>Home Owner</option>
+                <option>Rental</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="contactFirstName">Contact First Name</label>
+              <input type="text" class="form-control" id="contactFirstName" name="contactFirstName"
+                     formControlName="contactFirstName">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="contactLastName">Contact Last Name</label>
+              <input type="text" class="form-control" id="contactLastName" name="contactLastName"
+                     formControlName="contactLastName">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="contactEmail">Contact Email</label>
+              <input type="email" class="form-control" id="contactEmail" name="contactEmail"
+                     formControlName="contactEmail" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                else.</small>
+            </div>
+
+<!--            <div class="form-group col-md-4" >-->
+<!--                <label for="contactPhone">Contact Phone</label>-->
+<!--              <div  style="display: flex;" >-->
+<!--                  <input type="text" class="form-control" id="contactPhone" name="contactPhone"-->
+<!--                         formControlName="contactPhone" style="margin-right: 50px">-->
+<!--                  <button class="btn btn-primary" (click)="addOtherPhone()">+</button>-->
+<!--              </div>-->
+
+<!--              <div class="form-group" formArrayName="otherPhones">-->
+<!--                <div *ngFor="let p of otherPhones.controls; let i=index" [formGroupName]="i" style="display: flex; margin: 10px 0">-->
+<!--                  <input type="text" class="form-control"  formControlName="otherPhones" style="margin-right: 50px">-->
+<!--                  <button class="btn btn-primary" (click)="deleteOtherPhone(i)">-</button>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--            below codes are less than above, but above codes are more easy to understand-->
+            <div class="form-group col-md-4" >
+              <label>Contact Phone</label>
+              <div formArrayName="contactPhones">
+                <div *ngFor="let p of otherPhones.controls; let i=index" [formGroupName]="i" style="display: flex; margin-bottom: 10px ">
+                  <input type="text" class="form-control" formControlName="otherContactPhone">
+                  <button *ngIf="this.otherPhones.length>1" class="btn btn-primary" (click)="deleteOtherPhone(i)">-</button>
+                </div>
+                <div>
+                  <button  class="btn btn-primary" (click)="addOtherPhone()">+</button>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="form-group col-md-4 mb-2"></div>
+
+            <div class="form-group col-md-12"></div>
+
+            <!--      Mortgage Information       ---------------------------->
+
+            <div class="col-md-12">
+              <h5 class="mb-2"><strong>Existing Mortgage Information</strong></h5>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="firstMortCo">1st Mortgage Co.</label>
+              <input type="text" class="form-control" id="firstMortCo" name="firstMortCo"
+                     formControlName="firstMortCo">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="firstLoanType">1st Loan Type</label>
+              <select class="form-control" id="firstLoanType" name="firstLoanType" formControlName="firstLoanType">
+                <option>Mortgages-Institutions</option>
+                <option>?</option>
+                <option>?</option>
+                <option></option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="firstRateType">1st Rate Type</label>
+              <select class="form-control" id="firstRateType" name="firstRateType" formControlName="firstRateType">
+                <option>Conventional/Low Rate Mortgages</option>
+                <option>High Ratio Mortgages</option>
+                <option>Open Mortgages</option>
+                <option>Closed Mortgages</option>
+                <option>Fixed Rate Mortgages</option>
+                <option>Variable Rate Mortgages / Adjustable Rate Mortgage</option>
+                <option></option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="firstIntRate">1st Interest Rate (%)</label>
+              <input type="text" class="form-control" id="firstIntRate" name="firstIntRate"
+                     formControlName="firstIntRate">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="firstMortAmt">1st Original Mortgage Amt ($)</label>
+              <input type="text" pattern="[0-9]*" class="form-control" id="firstMortAmt" name="firstMortAmt"
+                     formControlName="firstMortAmt" #fma (blur)="firstMortAmt(fma.value)">
+
+              <!--              commented by mark as it cannot pass the prod compiliation-->
+              <!--              <app-form-currency formControlName="currencyType" ></app-form-currency>-->
+
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="firstMortBal">1st Existing Mortgage Balance ($)</label>
+              <input type="text" pattern="[0-9]*" class="form-control" id="firstMortBal" name="firstMortBal"
+                     formControlName="firstMortBal" #fmb (blur)="firstMortBal(fmb.value)">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="firstMortPayAmt">1st Mortgage Payment Amount ($)</label>
+              <input type="text" pattern="[0-9]*" class="form-control" id="firstMortPayAmt" name="firstMortPayAmt"
+                     formControlName="firstMortPayAmt" #fmp (blur)="firstMortPayAmt(fmp.value)">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="firstMortIntAmt">1st Mortgage Interest Amount ($)</label>
+              <input type="text" pattern="[0-9]*" class="form-control" id="firstMortIntAmt" name="firstMortIntAmt"
+                     formControlName="firstMortIntAmt" #fmia (blur)="firstMortIntAmt(fmia.value)">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="exiMortInsPreAmt">Existing Mortgage Insurance Premium Amount ($)</label>
+              <input type="text" pattern="[0-9]*" class="form-control" id="exiMortInsPreAmt" name="exiMortInsPreAmt"
+                     formControlName="exiMortInsPreAmt" #ema (blur)="exiMortInsPreAmt(ema.value)">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="firstPayFrequency">1st Payment Frequency</label>
+              <select class="form-control" id="firstPayFrequency" name="firstPayFrequency"
+                      formControlName="firstPayFrequency">
+                <option>Monthly</option>
+                <option>?</option>
+                <option>?</option>
+                <option></option>
+              </select>
+            </div>
+
+            <!--            <div class="form-group col-md-4">-->
+            <!--              <label for="firstMaturityDate">1st Maturity Date</label>-->
+            <!--              <input type="date" class="form-control" style="color: gray" id="firstMaturityDate" name="firstMaturityDate"-->
+            <!--                     formControlName="firstMaturityDate">-->
+            <!--            </div>-->
+
+            <div class="col-md-4 form-group mb-3">
+              <label for="firstMaturityDate">1st Maturity Date</label>
+              <div class="input-group">
+                <input id="firstMaturityDate" class="form-control" placeholder="yyyy-mm-dd" Name="firstMaturityDate"
+                       ngbDatepicker #firstMaturityDate="ngbDatepicker">
+                <div class="input-group-append">
+                  <button class="btn btn-secondary" (click)="firstMaturityDate.toggle()" type="button">
+                    <i class="icon-regular i-Calendar-4"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="firstColMort">1st Collateral Mortgage</label>
+              <select class="form-control" id="firstColMort" name="firstColMort" formControlName="firstColMort">
+                <option>No</option>
+                <option>Yes</option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="firstColAmt">1st Collateral Amount ($)</label>
+              <input type="text" pattern="[0-9]*" class="form-control" id="firstColAmt" name="firstColAmt"
+                     formControlName="firstColAmt" #fca (blur)="firstColAmt(fca.value)">
+            </div>
+
+            <div class="form-group col-md-8">
+            </div>
+
+            <!--            <div class="form-group col-md-12">-->
+            <!--            </div>-->
+
+            <!--            hiding part ------------------------------------->
+            <ngb-tabset class="nav-tabs-new col-md-12">
+              <ngb-tab>
+                <ng-template ngbTabContent>
+                  <ngb-accordion [closeOthers]="true">
+                    <ngb-panel>
+                      <ng-template ngbPanelTitle>
+                        <div><b>Existing Mortgage - 2nd (optional)</b></div>
+                      </ng-template>
+                      <ng-template ngbPanelContent>
+                        <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}">
+
+                          <div class="row">
+                            <!--                              <div class="col-md-12">-->
+                            <!--                                <h5 class="mb-2"><strong></strong></h5>-->
+                            <!--                              </div>-->
+
+                            <div class="form-group col-md-4">
+                              <label for="secMortCo">2nd Mortgage Co.</label>
+                              <input type="text" class="form-control" id="secMortCo" name="secMortCo"
+                                     formControlName="secMortCo">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                              <label for="secLoanType">2nd Loan Type</label>
+                              <select class="form-control" id="secLoanType" name="secLoanType"
+                                      formControlName="secLoanType">
+                                <option>Mortgages-Institutions</option>
+                                <option>?</option>
+                                <option>?</option>
+                                <option></option>
+                              </select>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                              <label for="secRateType">2nd Loan Type</label>
+                              <select class="form-control" id="secRateType" name="secRateType"
+                                      formControlName="secRateType">
+                                <option>Conventional/Low Rate Mortgages</option>
+                                <option>High Ratio Mortgages</option>
+                                <option>Open Mortgages</option>
+                                <option>Closed Mortgages</option>
+                                <option>Fixed Rate Mortgages</option>
+                                <option>Variable Rate Mortgages / Adjustable Rate Mortgage</option>
+                                <option></option>
+                              </select>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                              <label for="secIntRate">2nd Interest Rate (%)</label>
+                              <input type="text" class="form-control" id="secIntRate" name="secIntRate"
+                                     formControlName="secIntRate">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                              <label for="secMortAmt">2nd Original Mortgage Amt ($)</label>
+                              <input type="text" pattern="[0-9]*" class="form-control" id="secMortAmt" name="secMortAmt"
+                                     formControlName="secMortAmt" #sma (blur)="secMortAmt(sma.value)">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                              <label for="secMortBal">2nd Existing Mortgage Balance ($)</label>
+                              <input type="text" pattern="[0-9]*" class="form-control" id="secMortBal" name="secMortBal"
+                                     formControlName="secMortBal" #smb (blur)="secMortBal(smb.value)">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                              <label for="secMortPayAmt">2nd Mortgage Payment Amount ($)</label>
+                              <input type="text" pattern="[0-9]*" class="form-control" id="secMortPayAmt"
+                                     name="secMortPayAmt"
+                                     formControlName="secMortPayAmt" #smp (blur)="secMortPayAmt(smp.value)">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                              <label for="secMortIntAmt">2nd Mortgage Interest Amount ($)</label>
+                              <input type="text" pattern="[0-9]*" class="form-control" id="secMortIntAmt"
+                                     name="secMortIntAmt"
+                                     formControlName="secMortIntAmt" #smia (blur)="secMortIntAmt(smia.value)">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                              <label for="secExiMortInsPreAmt">Existing Mortgage Insurance Premium Amount ($)</label>
+                              <input type="text" pattern="[0-9]*" class="form-control" id="secExiMortInsPreAmt"
+                                     name="secExiMortInsPreAmt"
+                                     formControlName="secExiMortInsPreAmt" #smip
+                                     (blur)="secExiMortInsPreAmt(smip.value)">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                              <label for="secPayFrequency">2nd Payment Frequency</label>
+                              <select class="form-control" id="secPayFrequency" name="secPayFrequency"
+                                      formControlName="secPayFrequency">
+                                <option>Monthly</option>
+                                <option>?</option>
+                                <option>?</option>
+                                <option></option>
+                              </select>
+                            </div>
+
+                            <div class="col-md-4 form-group mb-3">
+                              <label for="secMaturityDate">2nd Maturity Date</label>
+                              <div class="input-group">
+                                <input id="secMaturityDate" class="form-control" placeholder="yyyy-mm-dd"
+                                       name="secMaturityDate"
+                                       ngbDatepicker #secMaturityDate="ngbDatepicker">
+                                <div class="input-group-append">
+                                  <button class="btn btn-secondary" (click)="secMaturityDate.toggle()" type="button">
+                                    <i class="icon-regular i-Calendar-4"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+
+
+                            <div class="form-group col-md-4">
+                              <label for="secColMort">2nd Collateral Mortgage</label>
+                              <select class="form-control" id="secColMort" name="secColMort"
+                                      formControlName="secColMort">
+                                <option>No</option>
+                                <option>Yes</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                              <label for="secColAmt">2nd Collateral Amount ($)</label>
+                              <input type="text" pattern="[0-9]*" class="form-control" id="secColAmt" name="secColAmt"
+                                     formControlName="secColAmt" #sca (blur)="secColAmt(sca.value)">
+                            </div>
+
+                            <div class="form-group col-md-8">
+                            </div>
+
+                            <div class="form-group col-md-12">
+                            </div>
+                          </div>
+
+                        </div>
+                      </ng-template>
+                    </ngb-panel>
+                  </ngb-accordion>
+                </ng-template>
+              </ngb-tab>
+            </ngb-tabset>
+
+            <div class="form-group col-md-12">
+            </div>
+
+            <!--                            Assets-->
+
+            <div class="col-md-12">
+              <h5 class="mb-2"><strong>Assets</strong></h5>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="assetTotal">Asset Total ($)</label>
+              <input type="text" pattern="[0-9]*" class="form-control" id="assetTotal" name="assetTotal"
+                     formControlName="assetTotal" #at (blur)="assetTotal(at.value)">
+            </div>
+
+            <div class="form-group col-md-8">
+              <label for="releAssets">Describe relevant assets</label>
+              <input type="text" class="form-control" id="releAssets" name="releAssets"
+                     formControlName="releAssets">
+            </div>
+
+            <div class="form-group col-md-12">
+            </div>
+
+            <!--           liabilities -->
+            <div class="col-md-12">
+              <h5 class="mb-2"><strong>Liabilities</strong></h5>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="totalDebtBal">Total Debt Balance ($)</label>
+              <input type="text" pattern="[0-9]*" class="form-control" id="totalDebtBal" name="totalDebtBal"
+                     formControlName="totalDebtBal" #tdb (blur)="totalDebtBal(tdb.value)">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="totalDebtValue">Total Debt Value ($)</label>
+              <input type="text" pattern="[0-9]*" class="form-control" id="totalDebtValue" name="totalDebtValue"
+                     formControlName="totalDebtValue" #tdv (blur)="totalDebtValue(tdv.value)">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="totalDebtMonPay">Total Debt Monthly Payment Amount ($)</label>
+              <input type="text" pattern="[0-9]*" class="form-control" id="totalDebtMonPay" name="totalDebtMonPay"
+                     formControlName="totalDebtMonPay" #tdp (blur)="totalDebtMonPay(tdp.value)">
+            </div>
+
+            <div class="form-group col-md-12">
+              <label for="allLiab">Describe or list all liabilities</label>
+              <input type="text" class="form-control" id="allLiab" name="allLiab"
+                     formControlName="allLiab">
+            </div>
+
+            <div class="form-group col-md-12"></div>
+
+            <!--            Independent Legal Information-->
+            <div class="col-md-12">
+              <h5 class="mb-2"><strong>Independent Legal Information</strong></h5>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="lawyerFirstName">Lawyer First Name</label>
+              <input type="text" class="form-control" id="lawyerFirstName" name="lawyerFirstName"
+                     formControlName="lawyerFirstName">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="lawyerLastName">Lawyer Last Name</label>
+              <input type="text" class="form-control" id="lawyerLastName" name="lawyerLastName"
+                     formControlName="lawyerLastName">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="lawyerCoName">Lawyer Co. Name</label>
+              <input type="text" class="form-control" id="lawyerCoName" name="lawyerCoName"
+                     formControlName="lawyerCoName">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="lawyerEmail">Email address</label>
+              <input type="email" class="form-control" id="lawyerEmail" name="lawyerEmail" aria-describedby="emailHelp"
+                     formControlName="lawyerEmail">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="lawyerPhone">Lawyer Phone</label>
+              <input type="text" class="form-control" id="lawyerPhone" name="lawyerPhone"
+                     formControlName="lawyerPhone">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="lawyerFax">Lawyer Fax</label>
+              <input type="text" class="form-control" id="lawyerFax" name="lawyerFax"
+                     formControlName="lawyerFax">
+            </div>
+
+            <div class="form-group col-md-12">
+              <label for="lawyerAddress">Lawyer Address</label>
+              <input type="text" class="form-control" id="lawyerAddress" name="lawyerAddress"
+                     formControlName="lawyerAddress">
+            </div>
+
+            <div class="form-group col-md-12">
+            </div>
+
+            <div class="col-md-12">
+              <h5 class="mb-2"><strong>Description</strong></h5>
+            </div>
+
+            <div class="form-group col-md-12">
+              <label for="agentPrivateNotes">Agent Private Notes</label>
+              <input type="text" class="form-control" id="agentPrivateNotes" name="agentPrivateNotes"
+                     formControlName="agentPrivateNotes">
+            </div>
+
+            <div class="form-group col-md-12">
+              <label for="agentNotesToAppraiser">Agent Notes to Appraiser</label>
+              <input type="text" class="form-control" id="agentNotesToAppraiser" name="agentNotesToAppraiser"
+                     formControlName="agentNotesToAppraiser">
+            </div>
+
+
+            <div class="form-group col-md-12">
+            </div>
+
+            <div class="col-md-12">
+              <h5 class="mb-2"><strong>Application System Infomation</strong></h5>
+            </div>
+
+
+            <div class="col-md-6">
+              <h6 class="mb-2">Assigned to</h6>
+              <label class="checkbox checkbox-primary">
+                <input type="checkbox" checked>
+                <span>User01</span>
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox checkbox-secondary">
+                <input type="checkbox" checked>
+                <span>Group01</span>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+            <div class="form-group col-md-6">
+              <h6>Assigned to</h6>
+
+              <div class="form-check">
+                <div>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="asignedTo" value="user"
+                           formControlName="asignedTo" checked>
+                    <span>User</span>
+                  </label>
+                </div>
+
+                <div>
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="asignedTo" value="group"
+                           formControlName="asignedTo">
+                    <span>Group</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group col-md-12"></div>
+            <div class="form-group col-md-12"></div>
+
+            <div class="col-md-12 page3button">
+              <h4><strong>Click "Next" button to explore your available loan options</strong>
+              </h4>
+              <img src="./assets/images/right-arrow01.png" width="6%">
+            </div>
+
+            <!--            <div class="form-group col-md-3"></div>-->
+
+            <!--            <div class="col-md-5.5 mb-4" >-->
+            <!--              <div class="p-1 rounded d-flex align-items-center bg-primary text-white">-->
+            <!--                <i class="text-30 mr-3"></i>-->
+            <!--                <div>-->
+            <!--                  <h4 class="text-18 mb-1 mr-3 text-white">Click "Next" to check your available loan options!!</h4>-->
+            <!--                </div>-->
+            <!--              </div>-->
+            <!--            </div>-->
+
+            <div class="form-group col-md-3"></div>
+
+            <div class="col-md-12" style="display: flex; justify-content: space-between">
+              <div class="shadow-sm card p-4 col-md-6">
+                <div class="form-group">
+                  <label class="h4 mb-3">Show Your Subject Img here</label>
+                  <input type="file" class="form-control-file" (change)="subjectPicChanged($event)" aria-describedby="fileHelpId">
+                </div>
+                <img *ngIf="this.step2Form.value.subjectPic" [src]="this.step2Form.value.subjectPic" class="img-thumbnail">
+              </div>
+
+              <div class="col-md-6" style="padding-right: 0">
+                <button style="margin: 5px 0" (click)="step2Form.valid ? generateStep2Pdf('open') : ''"
+                        class="col-md-12 btn btn-primary d-flex align-items-center justify-content-center">
+                  <i class="material-icons">picture_as_pdf</i>
+                  <span>Open PDF</span></button>
+                <button style="margin: 5px 0" (click)="step2Form.valid ? generateStep2Pdf('download') : ''"
+                        class="col-md-12 btn btn-primary d-flex align-items-center justify-content-center">
+                  <i class="material-icons">
+                    cloud_download
+                  </i><span>Download PDF</span></button>
+                <button style="margin: 5px 0" (click)="step2Form.valid ? generateStep2Pdf('print') : ''"
+                        class="col-md-12 btn btn-primary d-flex align-items-center justify-content-center">
+                  <i class="material-icons">
+                    print
+                  </i><span>Print PDF</span></button>
+                <button style="margin: 5px 0" type='reset' (click)="resetBasicForm()"
+                        class="col-md-12 btn btn-primary d-flex align-items-center justify-content-center">
+                  <i class="material-icons">
+                    clear
+                  </i><span>Reset</span></button>
+              </div>
+
+            </div>
+
+          </div>
+        </form>
+      </wizard-step>
+
+      <!--      step three---------------------------------------------------------------------------- -->
+
+      <wizard-step  [title]="'Available Loan Options'" (onNext)="onStep3Next($event)">
+        <div class="text-center mt-4 mb-4">
+          <i class="i-File-Clipboard-File--Text text-32 mb-3 text-success d-inline-block"></i>
+          <h5 class="font-weight-light">Loan Summary </h5>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
+              <!--              <div class="card-body ">-->
+              <!--                <i class="i-Add-User"></i>-->
+              <!--                <div class="">-->
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Loan Amount</li>
+                <li class="list-group-item">Payment Frequency</li>
+                <li class="list-group-item">Loan Type</li>
+              </ul>
+              <!--                </div>-->
+              <!--              </div>-->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Term(Months)</li>
+                <li class="list-group-item">Mortgage Type</li>
+                <li class="list-group-item">LTV:</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Expected Closing Date</li>
+                <li class="list-group-item">Tenure</li>
+                <li class="list-group-item">Payment Type</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!--                  Available Loan Option                             -->
+
+        <div class="text-center mt-4 mb-4">
+          <i class="i-Token- text-32 mb-3 text-success d-inline-block"></i>
+          <h5 class="font-weight-light">Available Loan Option(s) </h5>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+
+              <div class="col-md-3">
+                <div class="card mb-4 o-hidden" [class.optionOpen]="selectedLoanOp1">
+                  <img class="card-img-top" src="./assets/images/business-success01.jpg">
+                  <div class="card-body" [class.optionOpen]="selectedLoanOp1">
+                    <h5 class="card-title"><b>Lending Option 1</b></h5>
+
+                    <div class="row page3button" [class.optionOpen]="selectedLoanOp1">
+                      <div class="col-lg-12 col-md-12" [class.optionOpen]="selectedLoanOp1">
+                        <h5>Select Term Type</h5>
+                        <div class="card mb-3" [class.optionOpen]="selectedLoanOp1">
+                          <div class="row page3button" >
+                            <div class="col-md-6 mt-3 mt-md-0">
+                              <button class="btn btn-primary btn-block">Open</button>
+                            </div>
+                            <div class="col-md-6 mt-3 mt-md-0">
+                              <button class="btn btn-primary btn-block">Closed</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="card-text" style="text-align: center">Repayment Type Interest Only</p>
+                  </div>
+
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp1">Loan Interest: 5.49%</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp1">Total Lending Fees: $3,380.00</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp1">Est.Lender Legal Fee: $1,500.00</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp1">Broker Fee: $5,000.00</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp1">Monthly Mortgage Payment & Fees: $1,123.75</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp1">Disclosure Rate: 9.51%</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp1">Est. Total Cost of Borrowing: $23,774.00</li>
+                    <img *ngIf="selectedLoanOp1" class="loan-option"
+                         src="./assets/images/checkmark02.png"
+                         [style.zIndex]="100">
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp1">Legal Retainer Fee: $250.00</li>
+                  </ul>
+
+                  <div class="card-body" style="text-align: center;">
+
+                    <a href="#" class="card-link">More details</a>
+                  </div>
+
+                  <div class="row page3button">
+                    <div class="col-md-9">
+                      <div class="card mb-3">
+                        <button type="button" class="btn btn-primary m-1" (click)="loanOption1Selected()">SELECT</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card mb-4 o-hidden" [class.optionOpen]="selectedLoanOp2">
+                  <img class="card-img-top" src="./assets/images/business-success01.jpg">
+                  <div class="card-body" [class.optionOpen]="selectedLoanOp2">
+                    <h5 class="card-title"><b>Lending Option 2</b></h5>
+
+                    <div class="row page3button" [class.optionOpen]="selectedLoanOp2">
+                      <div class="col-lg-12 col-md-12" [class.optionOpen]="selectedLoanOp2">
+                        <h5>Select Term Type</h5>
+                        <div class="card mb-3" [class.optionOpen]="selectedLoanOp2">
+                          <div class="row page3button" >
+                            <div class="col-md-6 mt-3 mt-md-0">
+                              <button class="btn btn-primary btn-block">Open</button>
+                            </div>
+                            <div class="col-md-6 mt-3 mt-md-0">
+                              <button class="btn btn-primary btn-block">Closed</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="card-text" style="text-align: center">Repayment Type Interest Only</p>
+                  </div>
+
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp2">Loan Interest: 5.49%</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp2">Total Lending Fees: $3,380.00</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp2">Est.Lender Legal Fee: $1,500.00</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp2">Broker Fee: $5,000.00</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp2">Monthly Mortgage Payment & Fees: $1,123.75</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp2">Disclosure Rate: 9.51%</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp2">Est. Total Cost of Borrowing: $23,774.00</li>
+                    <img *ngIf="selectedLoanOp2" class="loan-option"
+                         src="./assets/images/checkmark02.png"
+                         [style.zIndex]="100">
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp2">Legal Retainer Fee: $250.00</li>
+                  </ul>
+                  <div class="card-body" style="text-align: center;">
+                    <a href="#" class="card-link">More details</a>
+                  </div>
+                  <div class="row page3button">
+                    <div class="col-md-9">
+                      <div class="card mb-3">
+                        <button type="button" class="btn btn-primary m-1" (click)="loanOption2Selected()">SELECT</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card mb-4 o-hidden" [class.optionOpen]="selectedLoanOp3">
+                  <img class="card-img-top" src="./assets/images/business-success01.jpg">
+                  <div class="card-body" [class.optionOpen]="selectedLoanOp3">
+                    <h5 class="card-title"><b>Lending Option 3</b></h5>
+
+                    <div class="row page3button" [class.optionOpen]="selectedLoanOp3">
+                      <div class="col-lg-12 col-md-12" [class.optionOpen]="selectedLoanOp3">
+                        <h5>Select Term Type</h5>
+                        <div class="card mb-3" [class.optionOpen]="selectedLoanOp3">
+                          <div class="row page3button" >
+                            <div class="col-md-6 mt-3 mt-md-0">
+                              <button class="btn btn-primary btn-block">Open</button>
+                            </div>
+                            <div class="col-md-6 mt-3 mt-md-0">
+                              <button class="btn btn-primary btn-block">Closed</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="card-text" style="text-align: center">Repayment Type Interest Only</p>
+                  </div>
+
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp3">Loan Interest: 5.49%</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp3">Total Lending Fees: $3,380.00</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp3">Est.Lender Legal Fee: $1,500.00</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp3">Broker Fee: $5,000.00</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp3">Monthly Mortgage Payment & Fees: $1,123.75</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp3">Disclosure Rate: 9.51%</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp3">Est. Total Cost of Borrowing: $23,774.00</li>
+                    <img *ngIf="selectedLoanOp3" class="loan-option"
+                         src="./assets/images/checkmark02.png"
+                         [style.zIndex]="100">
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp3">Legal Retainer Fee: $250.00</li>
+                  </ul>
+
+                  <div class="card-body" style="text-align: center;">
+
+                    <a href="#" class="card-link">More details</a>
+                  </div>
+
+                  <div class="row page3button">
+                    <div class="col-md-9">
+                      <div class="card mb-3">
+                        <button type="button" class="btn btn-primary m-1" (click)="loanOption3Selected()">SELECT</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card mb-4 o-hidden" [class.optionOpen]="selectedLoanOp4">
+                  <img class="card-img-top" src="./assets/images/business-success01.jpg">
+                  <div class="card-body" [class.optionOpen]="selectedLoanOp4">
+                    <h5 class="card-title"><b>Lending Option 4</b></h5>
+
+                    <div class="row page3button" [class.optionOpen]="selectedLoanOp4">
+                      <div class="col-lg-12 col-md-12" [class.optionOpen]="selectedLoanOp4">
+                        <h5>Select Term Type</h5>
+                        <div class="card mb-3" [class.optionOpen]="selectedLoanOp4">
+                          <div class="row page3button" >
+                            <div class="col-md-6 mt-3 mt-md-0">
+                              <button class="btn btn-primary btn-block">Open</button>
+                            </div>
+                            <div class="col-md-6 mt-3 mt-md-0">
+                              <button class="btn btn-primary btn-block">Closed</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="card-text" style="text-align: center">Repayment Type Interest Only</p>
+                  </div>
+
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp4">Loan Interest: 5.49%</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp4">Total Lending Fees: $3,380.00</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp4">Est.Lender Legal Fee: $1,500.00</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp4">Broker Fee: $5,000.00</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp4">Monthly Mortgage Payment & Fees: $1,123.75</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp4">Disclosure Rate: 9.51%</li>
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp4">Est. Total Cost of Borrowing: $23,774.00</li>
+                    <img *ngIf="selectedLoanOp4" class="loan-option"
+                         src="./assets/images/checkmark02.png"
+                         [style.zIndex]="100">
+                    <li class="list-group-item" [class.optionOpen]="selectedLoanOp4">Legal Retainer Fee: $250.00</li>
+                  </ul>
+
+                  <div class="card-body" style="text-align: center;">
+
+                    <a href="#" class="card-link">More details</a>
+                  </div>
+
+                  <div class="row page3button">
+                    <div class="col-md-9">
+                      <div class="card mb-3">
+                        <button type="button" class="btn btn-primary m-1" (click)="loanOption4Selected()">SELECT</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </wizard-step>
+
+      <!--     last step------------------------------------------------------ -->
+
+      <wizard-step [title]="'Payment Info'" (onComplete)="onComplete($event)">
+        <form #paymentForm="ngForm">
+          <div class="row">
+
+            <div class="col-md-6">
+              <h5 class="mb-2"><strong>Selected Service: </strong></h5>
+            </div>
+
+            <div class="col-md-6">
+              <h5 class="mb-2"><strong>Cost:</strong></h5>
+            </div>
+
+            <div class="form-group col-md-12"></div>
+
+            <div class="form-group col-md-6 mb-3">
+              <label for="card">Card name</label>
+              <input type="text" class="form-control" id="cardName" name="cardName" placeholder="Card Name"
+                     [(ngModel)]="data.cardName">
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <label for="card">Card number</label>
+              <input type="text" class="form-control" id="card" name="card" placeholder="Card Number"
+                     [(ngModel)]="data.card">
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <label for="exp">Expires at</label>
+              <input type="text" class="form-control" id="exp" name="exp" placeholder="Expires at"
+                     [(ngModel)]="data.cardExpiresAt">
+            </div>
+            <div class="form-group col-md-6 mb-3">
+              <label for="security">Security code / CVC</label>
+              <input type="text" class="form-control" id="security" name="exp" placeholder="Security code"
+                     [(ngModel)]="data.code">
+            </div>
+          </div>
+        </form>
+      </wizard-step>
+
+    </form-wizard>
+
+  </div>
+</div>
+
+
+
+

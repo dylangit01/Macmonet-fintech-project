@@ -1,0 +1,191 @@
+<div class="breadcrumb">
+  <h1>Applicant Credit Info.</h1>
+  <ul>
+    <li></li>
+  </ul>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="card mb-4" >
+      <div class="card-body-new">
+        <div class="card-title-new m-1"><b>Identification</b></div>
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <div class="basicButtonPadding rounded d-flex align-items-center bg-primary text-white ">
+              <i class="i-Checked-User text-32 mr-3"></i>
+              <div class="content-center">
+                <h4 class="text-18 mb-1 text-white textCen">Name:</h4>
+                <h4 class="text-20 mb-1 text-white textCen" >Dylan Du</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 mb-4">
+            <div class="basicButtonPadding rounded d-flex align-items-center bg-primary text-white">
+              <i class="i-Home1 text-32 mr-3"></i>
+              <div class="content-center">
+                <h4 class="text-18 mb-1 text-white textCen">Current Address:</h4>
+                <h4 class="text-20 mb-1 text-white textCen">80 Acadia Road, Toronto</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="basicButtonPadding rounded d-flex align-items-center bg-primary text-white">
+              <i class="i-Clock-3 text-32 mr-3"></i>
+              <div class="content-center">
+                <h4 class="text-18 mb-1 text-white textCen">Date of Birth:</h4>
+                <h4 class="text-20 mb-1 text-white textCen">1984/11/11</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="basicButtonPadding rounded d-flex align-items-center bg-primary text-white">
+              <i class="i-ID-2 text-28 mr-3"></i>
+              <div class="content-center">
+                <h4 class="text-18 mb-1 text-white textCen">SIN #:</h4>
+                <h4 class="text-20 mb-1 text-white textCen">222-444-754</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6" style="margin-bottom: 25px">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title" style="margin-bottom: 10px"><b>Equifax Credit Score</b></div>
+        <div class="row">
+          <div class="col-md-6" >
+            <table class="table">
+              <thead class="thead-light">
+
+              <tr>
+                <th colspan="2">Where You Stand</th >
+              </tr>
+
+              </thead>
+              <tbody>
+              <tr>
+                <td style="background: #4CAF50">Excellent</td>
+                <td class="font-weight-bold textCen">760 - 900</td>
+              </tr>
+              <tr>
+                <td style="background: greenyellow">Very Good</td>
+                <td class="font-weight-bold">725 - 759</td>
+              </tr>
+              <tr>
+                <td style="background: #f6f078">Good</td>
+                <td class="font-weight-bold">660 - 724</td>
+              </tr>
+              <tr>
+                <td style="background: #ffc107">Fair</td>
+                <td class="font-weight-bold">560 - 659</td>
+              </tr>
+              <tr>
+                <td style="background: red">Poor</td>
+                <td class="font-weight-bold tableBLine">300 - 559</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-6" style="margin-top: 30px">
+            <div echarts [options]="chartPie1" [autoResize]="true" style="height: 200px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="card mb-4" >
+      <div class="card-body-new">
+        <div class="card-title-new m-1"><b>Identification-Subject</b></div>
+        <div class="row">
+
+            <div class=" col-md-6 col-sm-6">
+              <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Unique Number: xxx-xxx-xxx</li>
+                  <li class="list-group-item">Date File Opened: 2012/12/08</li>
+                  <li class="list-group-item">DOB/Age: 1994/03/23</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class=" col-md-6 col-sm-6">
+              <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">File Number: xx-xxxxxxxxx-xxx</li>
+                  <li class="list-group-item">Date of Last Activity: 2019/05/19</li>
+                  <li class="list-group-item">SIN: XXX-XXX-XXX</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class=" col-md-12 col-sm-6">
+            <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Name: XXX XXX</li>
+                <li class="list-group-item">Current Address: 50 Acadia Road, TORONTO, ON, M3L 0W2</li>
+                <li class="list-group-item">Since, R/O/B: 2018/09</li>
+                <li class="list-group-item">Reported: Tape Reported </li>
+                <li class="list-group-item">Former Address: XXXXXXXXXXX </li>
+                <li class="list-group-item">Since, R/O/B: 2014/05 </li>
+                <li class="list-group-item">Reported: Tape Reported</li>
+                <li class="list-group-item">2nd Former Address:  XXXXXXXXXXXXXXXXXX</li>
+                <li class="list-group-item">Since, R/O/B: 2012/11 </li>
+                <li class="list-group-item">Reported: Tape Reported</li>
+                <br>
+
+                <li class="list-group-item">Also Know As: XXX XXX </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class=" col-md-12 col-sm-6">
+            <div class="card o-hidden mb-4">
+              <div class="eleSpaceBetween">
+                  <div class="">
+                    <p class="text-primary mb-1">Phone Number</p>
+                    <span>(647) 365-4987</span>
+                    <br>
+                    <span>(519) 237-0098</span>
+                  </div>
+                  <div class="">
+                    <p class="text-primary mb-1">Ext</p>
+                    <span></span>
+                    <br>
+                    <span></span>
+                  </div>
+                <div class="">
+                  <p class="text-primary mb-1">Type</p>
+                  <span>Residential/Home</span>
+                  <br>
+                  <span></span>
+                </div>
+                <div class="">
+                  <p class="text-primary mb-1">First Reported</p>
+                  <span>2013/11/15</span>
+                  <br>
+                  <span>2012/12/09</span>
+                </div>
+                <div class="">
+                  <p class="text-primary mb-1">Last Received</p>
+                  <span>2019/10/02</span>
+                  <br>
+                  <span>2014/09/11</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

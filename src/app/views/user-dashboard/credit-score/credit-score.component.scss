@@ -1,0 +1,59 @@
+.eleCenter {
+  display: flex;
+  justify-content: center
+}
+
+.eleSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 10px;
+  margin: 10px;
+}
+
+div.autoWrap {
+  word-wrap: break-word;
+}
+
+.basicButtonPadding {
+  padding: 10px
+}
+
+.textCen {
+  text-align: center;
+}
+
+.card-body-new {
+  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
+  // as much space as possible, ensuring footers are aligned to the bottom.
+  flex: 1 1 auto;
+  padding: 1.25rem 0.82rem 0.82rem;
+}
+
+th {
+  padding: 5px;
+  text-align: center;
+}
+
+td{
+    text-align: center;
+    vertical-align: middle
+  }
+
+.tableBLine {
+  border-bottom: 1px solid lightgray;
+}
+
+.card-title-new {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.content-center {
+  //position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //align-items: flex-start;
+}

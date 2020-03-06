@@ -1,0 +1,319 @@
+  <!--  <div class="breadcrumb">-->
+  <!--    <h1>Application List</h1>-->
+  <!--  </div>-->
+
+  <!--  <div class="separator-breadcrumb border-top"></div>-->
+<div style="display: flex; align-items: flex-start; justify-content: space-between;">
+  <div class="breadcrumb">
+    <h1>Applications</h1>
+  </div>
+<!--    <div class="col-md-6">-->
+<!--      <div class="form-group">-->
+<!--        <input id="appName" placeholder="Search Applicant" [formControl]="searchControl" class="form-control form-control-rounded" type="text">-->
+<!--      </div>-->
+<!--    </div>-->
+  <div class="col-md-3"></div>
+</div>
+
+<!--        <ul>-->
+<!--          <li><a href="">UI Kits</a></li>-->
+<!--          <li>Accordion</li>-->
+<!--        </ul>-->
+
+
+  <div class="separator-breadcrumb border-top"></div>
+  <div class="" id="pdfFile" #pdfFile>
+    <ngb-tabset class="p-0" >
+
+      <ngb-tab title="Application Information"  >
+        <ng-template ngbTabContent >
+          <ngb-accordion #acc="ngbAccordion" [closeOthers]="false" activeIds="ngb-panel-0">
+            <ngb-panel title="Application Information">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Info content
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel>
+              <ng-template ngbPanelTitle>
+                <!--                <span>&#9733; <b>Fancy</b> title &#9733;</span>-->
+                <span>New Requested Mortgage Loan</span>
+              </ng-template>
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel title="Mortgage Information">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Mortgage Information -- Auto Calculated
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel title="Subject Property Access Information">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Subject Property
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel title="Independent Legal Information">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Independent Legal Information
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel title="Description">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Description
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel title="Application System Information">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Info content
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel title="Comments Information">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Info content
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+          </ngb-accordion>
+        </ng-template>
+      </ngb-tab>
+
+      <ngb-tab title="Applicants">
+        <ng-template ngbTabContent>
+          <ngb-accordion #acc="ngbAccordion" [closeOthers]="false" activeIds="ngb-panel-0">
+            <ngb-panel title="Primary Applicant">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Info content
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel>
+              <ng-template ngbPanelTitle>
+                <!--                <span>&#9733; <b>Fancy</b> title &#9733;</span>-->
+                <span>Primary Applicant (Optional)</span>
+              </ng-template>
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel title="Co-Applicant One">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Mortgage Information -- Auto Calculated
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel title="Co-Applicant One (Optional)">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  XXXXXXXX
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+
+            <ngb-panel title="Guarantor">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  XXXXX
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel title="Guarantor (Optional)">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  XXXXX
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel title="Assets">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  XXXXX
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel title="Liabilities">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  XXXXX
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+
+          </ngb-accordion>
+        </ng-template>
+      </ngb-tab>
+
+      <ngb-tab title="Subject Property">
+        <ng-template ngbTabContent>
+          <ngb-accordion #acc="ngbAccordion" [closeOthers]="false" activeIds="ngb-panel-0">
+            <ngb-panel title="Subject Property - Part 1">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Subject Property - Part 1
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel>
+              <ng-template ngbPanelTitle>
+                <span>Subject Property - Part 2</span>
+              </ng-template>
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+
+          </ngb-accordion>
+        </ng-template>
+      </ngb-tab>
+
+      <ngb-tab title="Existing Mortgage">
+        <ng-template ngbTabContent>
+          <ngb-accordion #acc="ngbAccordion" [closeOthers]="false" activeIds="ngb-panel-0">
+            <ngb-panel title="Existing Mortgage Information">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Existing Mortgage Information
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel>
+              <ng-template ngbPanelTitle>
+                <!--                <span>&#9733; <b>Fancy</b> title &#9733;</span>-->
+                <span>Existing Mortgage - 2nd</span>
+              </ng-template>
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel title="Existing Mortgage - 3rd">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Mortgage Information -- Auto Calculated
+                </div>
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+        </ng-template>
+      </ngb-tab>
+
+      <ngb-tab title="Req Documents & Conditions">
+        <ng-template ngbTabContent>
+          <ngb-accordion #acc="ngbAccordion" [closeOthers]="false" activeIds="ngb-panel-0">
+            <ngb-panel title="Required Documents">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Documents
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel title="Required Conditions">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Required Conditions
+                </div>
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+        </ng-template>
+      </ngb-tab>
+
+      <ngb-tab title="More Information">
+        <ng-template ngbTabContent>
+          <ngb-accordion #acc="ngbAccordion" [closeOthers]="false" activeIds="ngb-panel-0">
+            <ngb-panel title="Activities">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Activities
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel>
+              <ng-template ngbPanelTitle>
+                <span>Activity History</span>
+              </ng-template>
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                </div>
+              </ng-template>
+            </ngb-panel>
+
+            <ngb-panel title="Email History">
+              <ng-template ngbPanelContent>
+                <div [@animate]="{value:'*',params:{y:'20px',opacity:'0',delay:'0ms', duration: '400ms'}}" class="paddingLeft">
+                  Mortgage Information -- Auto Calculated
+                </div>
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+        </ng-template>
+      </ngb-tab>
+
+            <ngb-tab title="Simple">
+              <ng-template ngbTabContent>
+      						<pre class="m-1 p-0">
+      							<code [highlight]>{{code}}</code>
+      					  	</pre>
+              </ng-template>
+            </ngb-tab>
+    </ngb-tabset>
+  </div>
+
+
+<!--<div> <button  (click)="downloadAsPDF()">Export To PDF</button></div>-->
+
+
+<!--  <div id="content">-->
+<!--    <div class="alert alert-info col-lg-2">-->
+<!--      <div>-->
+<!--        <button (click)="captureScreen()"> Export to PDF</button>-->
+<!--      </div>-->
+
+<!--    </div>-->
+
+<!--  </div>-->
+
+
+
+
+
+

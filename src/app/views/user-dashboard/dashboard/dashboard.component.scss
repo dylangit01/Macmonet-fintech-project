@@ -1,0 +1,11 @@
+.item-center {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.item-row {
+  display: flex;
+  flex-direction: row;
+  //height: 100%;
+}

@@ -1,0 +1,11 @@
+<div>
+  <ng-container *ngIf="message$ | async as msgs" >
+    <div *ngFor="let eachMsg of msgs" class="alert alert-{{eachMsg.type}} alert-dismissible fade show" role="alert">
+      {{eachMsg.message}}
+      <button (click)="closeMessage(eachMsg)"
+              type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </ng-container>
+</div>

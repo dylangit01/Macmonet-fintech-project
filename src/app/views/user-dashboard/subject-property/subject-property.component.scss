@@ -1,0 +1,41 @@
+agm-map {
+  height: 400px;
+}
+
+.loaderCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layer1 {
+  position: relative;
+  z-index: 1;
+}
+
+.layer2 {
+  position: absolute;
+  z-index: 100;
+  background-color: rgba(1,1,1,0.5);
+  height: 400px;
+}
+.content-center {
+  //position: relative;
+  //margin: auto;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //align-items: flex-start;
+}
+
+.textCen {
+  text-align: center;
+}
+
+.address-SubHeight {
+  height: 50px;
+}
+
+

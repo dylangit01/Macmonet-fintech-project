@@ -1,0 +1,28 @@
+.loan-option {
+  position: absolute;
+  bottom: 50px;
+  right: -10px;
+  width: 35%;
+}
+
+.page3button {
+  display: flex;
+  justify-content: center
+}
+
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(80%);
+}
+
+.optionOpen {
+  background: #ced4da;
+}
+
+.phoneSpace {
+  margin-top: 0
+}
+
+.otherPhoneSpace {
+  margin: 10px 0;
+}

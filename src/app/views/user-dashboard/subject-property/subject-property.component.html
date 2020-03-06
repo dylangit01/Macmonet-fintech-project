@@ -1,0 +1,61 @@
+<!--<div class="container">-->
+
+  <h1>Subject Information</h1>
+
+  <div class="form-group">
+    <label>Enter address</label>
+    <input type="text" class="form-control" (blur)="$event.preventDefault()"
+           placeholder="Search Nearest Location" autocorrect="off"
+           autocapitalize="off" spellcheck="off" type="text" #search>
+  </div>
+
+
+    <div>
+        <div *ngIf="showLoader" class="layer2 loaderCenter col-lg-11">
+          <div class="spinner-bubble spinner-bubble-warning m-5"></div>
+        </div>
+
+      <div class="layer1">
+        <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" >
+          <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+                      (dragEnd)="markerDragEnd($event)"></agm-marker>
+        </agm-map>
+      </div>
+    </div>
+
+<!--  <h5>Address: {{address}}</h5>-->
+<br>
+
+
+<div class="col-lg-6 col-md-6 col-sm-6 p-0" >
+  <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
+    <div class="card-body text-center" style="height: 80px">
+      <i class="i-Home1" style="font-size: 3rem"></i>
+      <div class="content-center">
+        <p class="text-muted text-18 mt-2 mb-0">Address:</p>
+        <p class="text-primary text-20 line-height-1 mb-2 item-center">{{address}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-6 col-md-6 col-sm-6 p-0" >
+  <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
+    <div class="card-body text-center" style="height: 80px">
+      <i class="i-Dollar-Sign" style="font-size: 3rem;"></i>
+      <div class="content-center">
+        <p class="text-muted text-18 mt-2 mb-0">Subject Amount:</p>
+        <p class="text-primary text-20 line-height-1 mb-2 item-center" *ngIf="subjectAmount">{{randomSA}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--  <h5 *ngIf="showSubjectAmount">Subject Amount: {{randomSA}}-->
+<!--  </h5>-->
+<!--  <div>Latitude: {{latitude}}</div>-->
+<!--  <div>Longitude: {{longitude}}</div>-->
+<!--</div>-->
+
+
