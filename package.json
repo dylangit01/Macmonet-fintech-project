@@ -35,7 +35,7 @@
     "date-fns": "1.29.0",
     "echarts": "4.2.0-rc.1",
     "feather-icons": "4.7.3",
-    "highlight.js": "9.13.1",
+    "highlight.js": "10.4.1",
     "html2canvas": "^1.0.0-rc.5",
     "jspdf": "^1.5.3",
     "ng2-validation": "4.2.0",
