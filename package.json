@@ -37,7 +37,7 @@
     "feather-icons": "4.7.3",
     "highlight.js": "9.13.1",
     "html2canvas": "^1.0.0-rc.5",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "ng2-validation": "4.2.0",
     "ngx-chips": "1.9.8",
     "ngx-color-picker": "7.0.1",
